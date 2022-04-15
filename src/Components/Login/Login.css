@@ -1,0 +1,56 @@
+.formcontainer{
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-direction: row;    
+    margin-left: 25%;
+    flex: 1;
+}
+
+.loginform{
+   
+    /* border: 1px solid bla; */
+    border-radius: 5%;
+    background-color: #FFC812;
+    padding: 5%;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
+    
+}
+.loginform input{
+   
+}
+.form-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#2f2e41;
+}
+.loginform label{
+    font-weight: bolder;
+    color:#2f2e41;
+
+}
+.loginform h3{
+   place-items: center;
+}
+#submit-btn{
+    cursor: pointer;
+    background-color:#2f2e41; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.loginpicture{
+    
+}
+.loginpicture img{
+    height:100%;
+    width: 60%;
+    margin: 20%;
+}

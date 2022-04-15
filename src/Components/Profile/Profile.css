@@ -1,0 +1,93 @@
+/* .profile{
+    position:absolute;
+    margin-left: 20%;
+    flex:80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+}
+.profile button{
+    max-width: 10%;
+}
+.profile .profile-username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    
+}
+.profile .edit{
+     
+    font-size: 40px;
+    margin-left: 3%;
+    cursor:pointer;
+} */
+.profile{
+    position:absolute;
+    margin-left: 10%;
+    flex:80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+}
+
+.head
+{
+    font-size: x-large;
+    margin-left: 8%;
+}
+.data
+{
+    font-size: larger;
+    margin-left: 1%;
+
+}
+.boxy
+{
+    width: 500px;
+    background: #2f2e41;
+    color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxy:hover
+{
+    border: 5px solid rgb(255, 200, 18);
+    background-color: transparent;
+    transition-duration: 0.5s;
+    color: black;
+}
+.profile .btn
+{
+    margin: 10%;
+    background-color: #2f2e41;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.profile .btn:hover
+{
+    background-color: rgb(255, 200, 18);
+    color: black;
+    box-shadow: 0 1px 3px black;
+    cursor: pointer;
+    width: auto;
+}
+.profile .btn-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    max-width:100%;
+}
+

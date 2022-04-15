@@ -1,0 +1,34 @@
+.registerform{
+  
+    padding: 10%;
+    height: 90%;
+    margin: 0%;
+    padding: 2%;
+    width: 50%;
+    border-radius: 5%;
+    background-color: #FFC812;
+    padding: 5%;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.registerform label{
+    font-weight: bolder;
+    color:#2f2e41;
+}
+.formcontainer2{
+    margin-left: 25%;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.registerpicture img{
+
+    height:100%;
+    width: 40%;
+    margin: 20%;
+    
+}

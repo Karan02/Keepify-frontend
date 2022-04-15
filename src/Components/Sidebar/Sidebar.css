@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ms+Madi&family=Shadows+Into+Light&family=Ultra&display=swap');
+.sidebar{
+    height: 100vh;
+    width: 20%;
+    border: 2px solid #2f2e41;
+   position: fixed;
+}
+.Linktag{
+    text-decoration: none;
+    color: #2f2e41;
+}
+.sidebar .userName{
+    margin-left: 20%;
+    font-size: 400%;
+    font-family: 'Indie Flower', cursive;
+    color: #2f2e41;
+    font-weight: bold;
+}
+.sidebar-list{
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+}
+.sidebar-list .row{
+    width: 80%;
+    height: 50%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    
+}
+.sidebar-list .active{
+    color: rgb(255, 200, 18);
+    background-color: #2f2e41;
+    text-decoration: none;
+}
+
+.linktag{
+    text-decoration: none;
+    color:#2f2e41;
+}
+.linktag :hover{
+    text-decoration: none;
+    color:white;
+    background-color: rgb(255, 200, 18) ;
+}
+.linktag .row:hover{
+    text-decoration: none;
+}
+.row .icon{
+    flex: 30%;
+    display: grid;
+    font-size: 40px;
+    place-items: center;
+    /* font-family: 'Indie Flower', cursive; */
+}
+.row .title{
+    flex: 70%;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}

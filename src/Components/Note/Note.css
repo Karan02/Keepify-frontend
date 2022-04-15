@@ -1,0 +1,72 @@
+
+.note {
+    display: flex;
+    flex-direction: column;
+  
+    background: rgb(255, 200, 18);
+
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgb(175, 175, 175);
+    padding: 10px;
+    margin: 16px;
+    display: flex;
+    cursor: pointer;
+    /* float: right; */
+  }
+  
+  .note h1 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .note p {
+    font-size: 1rem;
+    color: #6f212b;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .extraItem{
+    display: flex;
+    justify-content: space-around;
+  }
+  .note:hover .deleteNote{
+    display: block;
+    color: red;
+    cursor: pointer;
+    margin-top: 10%;
+    font-size: larger;
+    outline: black;
+   }
+   .deleteNote{
+     display: none;
+   }
+   .updateNote{
+     display: none;
+   }
+   .note:hover .updateNote{
+     display: block;
+     color: green;
+     cursor: pointer;
+   }
+
+.notetitle{
+
+    border: none;
+    outline: none;
+    background-color:rgb(255, 200, 18);
+  }
+.noteContent{
+  border: none;
+  outline:none;
+  background-color: rgb(255, 200, 18) ;
+  resize: none;
+}
+
+.note:hover{
+  width: 20%;
+}
+
+.noteContent::-webkit-scrollbar{
+  width: 0px;
+}
