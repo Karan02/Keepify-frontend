@@ -38,8 +38,8 @@ const Register = ({setUser}) => {
 		const data = await response.json()
     if(data.status === 'ok')
       {
-          
-          navigate("/");
+          alert("Registration successfull! Please login!");
+          navigate("/login");
       }
     if(data.status === 'error')
       {
@@ -74,7 +74,7 @@ const Register = ({setUser}) => {
                 </div>
 
                 <button type="submit" id="submit-btn" className="btn btn-dark btn-lg btn-block">Register</button>
-                <NavLink to={"/"} style={{color:"#2f2e41"}} > Already user? click here</NavLink>
+                <NavLink to={"/login"} style={{color:"#2f2e41"}} > Already user? click here</NavLink>
             </form>
             <div className="registerpicture" >
         <img src={registerimage}  />

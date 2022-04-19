@@ -101,7 +101,7 @@ const Todo = () => {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
-      id:index
+      "id":index
     },
    
   }
@@ -218,7 +218,7 @@ const Todo = () => {
                 </button>
             </div>
             <div className='showItems'>
-             <p style={{fontSize:"3em",fontWeight:"bolder"}}> Completed tasks</p>
+             <p className='txt' style={{fontSize:"3em",fontWeight:"bolder"}}> Completed tasks</p>
              {items.map((curElem,index)=> {
                if(curElem.todo.selected)
                {

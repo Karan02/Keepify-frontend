@@ -3,7 +3,7 @@ import {ImUser} from 'react-icons/im'
 export const SidebarData2 =[
     {
         title: "Login",
-        link : "/",
+        link : "/login",
         icon : <ImUser />
     },
     {

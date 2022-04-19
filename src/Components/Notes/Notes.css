@@ -68,3 +68,18 @@
     color: red;
 
 }
+
+@media only screen and (max-width: 500px) {
+    
+    .Notes{
+        margin-left: 0%;
+        margin: 5%;
+    }
+    .Notes form  {
+    
+       
+        max-width: 80%;
+      }
+    
+
+}

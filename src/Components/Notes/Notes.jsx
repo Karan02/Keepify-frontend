@@ -19,7 +19,8 @@ function Notes ({ onAdd }) {
   ]);
   const [color,setBgcolor] = useState("#ffc812");
   const [notes, setNotes] = useState([]);
-
+  const [notes2, setNotes2] = useState([]);
+  const [search, setSearch] = useState("");
   useEffect(() => {
     apiGet();
  },[]); 
@@ -103,18 +104,57 @@ function Notes ({ onAdd }) {
     
   };
 
+  const apiGet2 = async (search2) => {
+    
+     
+    setNotes2([]);
+    console.log(search2);
+    const req = await fetch('http://localhost:3001/search', {
+      method:"GET",
+        headers: {
+          'x-access-token': localStorage.getItem('token'),
+          'search':search2
+        },
+    })
+
+    const data = await req.json()
+		console.log(data);
+    setNotes2(data.data);
+    console.log(search2);
+    setSearch(" ");
+    
+
+ 
+    
+  };
   return (
     <div className="Notes">
-      <form>
+      <form onSubmit={(e)=>{e.preventDefault();apiGet2(search)}}>
       <input
             
             type="text"
             placeholder="Search"
             name="title"
-            
-           
+             onChange={(e)=>{setSearch(e.target.value)}}
+          //  onFocus={(e)=>{console.log(e.target.value)}}  
+           required
           />
+           <button type={"submit"}>
+          <IoIosAdd size={35} />
+        </button>
       </form>
+      <div className="notes-item">
+        {notes2.map(( note, index,_id) => (
+        <Note
+          key={index}
+          title={note.note.title}
+          content={note.note.content}
+           id={note._id}
+          func = {apiGet}
+          color ={note.note.color}
+        />
+      ))}
+      </div>
       <form>
       
         {isExpanded && (

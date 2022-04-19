@@ -6,6 +6,7 @@ import Notes from "./Components/Notes/Notes";
 import Todo from "./Components/Todo/Todo";
 import Profile from "./Components/Profile/Profile";
 import Login from "./Components/Login/Login";
+import Homepage from "./Components/Homepage/Homepage";
 import React, {useState,useEffect } from "react";
 import Register from "./Components/Signup/Register";
 import jwt_decode from "jwt-decode";
@@ -39,19 +40,21 @@ function App() {
         user ?
         <React.Fragment>
         <Sidebar setUser={user} SidebarData={SidebarData} />
-        <Routes>
-          <Route path="/notes" element={<Notes />} />
-          <Route path="/todo" element={<Todo />} />
-          <Route path="/profile" element={<Profile setUser={setUser} />} />
-        </Routes>
-          </React.Fragment> 
+          <Routes>
+        
+            <Route path="/notes" element={<Notes />} />
+            <Route path="/todo" element={<Todo />} />
+            <Route path="/profile" element={<Profile setUser={setUser} />} />
+          </Routes>
+        </React.Fragment> 
          :
          <React.Fragment>
          <Sidebar setUser={user} SidebarData={SidebarData2} />
-         <Routes>
-         <Route path="/" element={<Login user={user} setUser={setUser} />} />
-         <Route path="/register" element={<Register setUser={setUser} />} />
-        </Routes>
+          <Routes>
+          <Route path="/" element={<Homepage user={user} />} />
+            <Route path="/login" element={<Login user={user} setUser={setUser} />} />
+            <Route path="/register" element={<Register setUser={setUser} />} />
+          </Routes>
         </React.Fragment>
       }
       

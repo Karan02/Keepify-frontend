@@ -35,28 +35,30 @@
     flex-direction: column;
     width: 90%;
     height: 100%;
+    
 }
 
 .head
 {
-    font-size: x-large;
+    font-size: 200%;
     margin-left: 8%;
 }
 .data
 {
-    font-size: larger;
+    font-size: 200%;
     margin-left: 1%;
 
 }
 .boxy
 {
-    width: 500px;
+    width: 60%;
     background: #2f2e41;
     color: white;
     padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 2px;
 }
 
 .boxy:hover
@@ -91,3 +93,26 @@
     max-width:100%;
 }
 
+@media only screen and (max-width: 800px) {
+  
+    .boxy{
+        width: 80%;
+    }
+    .data{
+        font-size: 80%;
+    }
+    .head{
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+  
+    
+    .data{
+        font-size: 50%;
+    }
+    .head{
+        font-size: 50%;
+    }
+}

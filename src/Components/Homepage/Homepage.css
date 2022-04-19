@@ -1,0 +1,42 @@
+.home{
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;    
+    height: 70%;
+    width: 50%;
+    margin-top: 5%;
+
+}
+.welcome-txt{
+    margin-left: 10%;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bolder;
+    margin: 5%;
+}
+.welcome-txt #submit-btn{
+    width:100%;
+}
+
+@media only screen and (max-width: 500px) {
+  
+  
+    .welcome-image{
+        display: none;
+    }
+    .welcome-txt{
+        width: 60%;
+        font-size: 1em;
+    }
+  
+    
+.welcome-txt #submit-btn{
+    width:120%;
+}
+.sign-uptext{
+    font-size: 2%;
+}
+}

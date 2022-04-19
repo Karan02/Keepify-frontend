@@ -65,3 +65,60 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+@media only screen and (min-width: 768px) {
+    
+    .sidebar .userName{
+        font-size: 100%;
+        
+   }
+   .sidebar{
+       width: 10%;
+   }
+   .sidebar-list .row .title{
+    
+    font-size: 100%;
+}
+
+.sidebar-list .active{
+    color: rgb(255, 200, 18);
+  
+    text-decoration: none;
+}
+.linktag :hover{
+    /* text-decoration: none;
+    color:white;*/
+    background-color:none; 
+}
+    
+  }
+  @media only screen and (min-width: 1400px) {
+    
+    .sidebar .userName{
+         font-size: 400%;
+    }
+    .sidebar{
+        width: 20%;
+    }
+    .sidebar-list .row .title{  
+    font-size: 200%;
+    }
+  }
+  @media only screen and (min-width: 1020px) {
+    
+    .sidebar .userName{
+         font-size: 300%;
+    }
+    .sidebar{
+        width: 20%;
+    }
+    
+  }
+
+  @media only screen and (max-width: 767px) {
+    
+    .sidebar{
+         display: none;
+    }
+    
+}
