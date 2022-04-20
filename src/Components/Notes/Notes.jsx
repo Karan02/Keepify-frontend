@@ -3,6 +3,7 @@ import Note from "../Note/Note";
 import { IoIosAdd } from "react-icons/io";
 import './Notes.css'
 import {VscSymbolColor} from "react-icons/vsc";
+// import Tags from "../Tags/Tags";
 function Notes ({ onAdd }) {
   const [isExpanded, setExpanded] = useState(false);
 
@@ -181,6 +182,7 @@ function Notes ({ onAdd }) {
               console.log(e.target.value);
               setBgcolor(e.target.value);
          }} />)}
+         {/* <Tags /> */}
         </p>
         <button onClick={postData}>
           <IoIosAdd size={35} />

@@ -5,6 +5,32 @@
     border: 2px solid #2f2e41;
    position: fixed;
 }
+.sidebar-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+.sidebar2{
+    
+    color: white;
+    height: 100vh;
+    width: 60%;
+    border: 2px solid #2f2e41;
+   position: absolute;
+   background-color: #2f2e41;
+   overflow: hidden;
+   
+   z-index: 1;
+}
+
+.menu-button{
+    display: none;
+}
+
+.menu-button2{
+    display: none;
+}
 .Linktag{
     text-decoration: none;
     color: #2f2e41;
@@ -14,6 +40,13 @@
     font-size: 400%;
     font-family: 'Indie Flower', cursive;
     color: #2f2e41;
+    font-weight: bold;
+}
+.sidebar2 .userName{
+    margin-left:10%;
+    font-size: 150%;
+    font-family: 'Indie Flower', cursive;
+    color: rgb(255, 200, 18);
     font-weight: bold;
 }
 .sidebar-list{
@@ -39,15 +72,46 @@
     background-color: #2f2e41;
     text-decoration: none;
 }
+/*  */
+.sidebar2 .sidebar-list{
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+}
+.sidebar2 .sidebar-list .row{
+    width: 80%;
+    height: 50%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    
+}
+.sidebar2 .sidebar-list .active{
+    color: rgb(255, 200, 18);
+    background-color: #2f2e41;
+    text-decoration: none;
+}
 
 .linktag{
     text-decoration: none;
     color:#2f2e41;
 }
+
+.sidebar2 .linktag{
+    color: white;
+}
 .linktag :hover{
     text-decoration: none;
     color:white;
     background-color: rgb(255, 200, 18) ;
+}
+.close{
+    display: none;
 }
 .linktag .row:hover{
     text-decoration: none;
@@ -60,6 +124,28 @@
     /* font-family: 'Indie Flower', cursive; */
 }
 .row .title{
+    flex: 70%;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*  */
+.sidebar2 .linktag :hover{
+    text-decoration: none;
+    color:white;
+    background-color: rgb(255, 200, 18) ;
+}
+.sidebar2 .linktag .row:hover{
+    text-decoration: none;
+}
+.sidebar2 .row .icon{
+    flex: 30%;
+    display: grid;
+    font-size: 40px;
+    place-items: center;
+    /* font-family: 'Indie Flower', cursive; */
+}
+.sidebar2 .row .title{
     flex: 70%;
     font-size: 20px;
     font-weight: bold;
@@ -97,6 +183,9 @@
     .sidebar .userName{
          font-size: 400%;
     }
+    .menu-button{
+        display: none;
+    }
     .sidebar{
         width: 20%;
     }
@@ -119,6 +208,23 @@
     
     .sidebar{
          display: none;
+    }
+     .menu-button{
+        display: block;
+        margin: 1%;
+        font-size: 200%;
+        color: #2f2e41;
+        cursor: pointer;
+    }
+    .menu-button2{
+        display: block;
+        margin: 1%;
+        font-size: 200%;
+        color: rgb(255, 200, 18);
+        cursor: pointer;
+        float: right;
+        /* position: absolute; */
+        /* z-index: 1; */
     }
     
 }

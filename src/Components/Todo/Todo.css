@@ -8,6 +8,7 @@
   
   /*26466F*/
   .main-div {
+    margin-top:10% ;
     min-height: 100vh;
     display: flex;
     position: absolute;
