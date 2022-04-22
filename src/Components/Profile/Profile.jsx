@@ -25,7 +25,7 @@ const Profile = ({ setUser }) => {
     }
     async function deleteuser()
     {
-      const req = await fetch('http://localhost:3001/deleteuser', {
+      const req = await fetch('https://keepify-keepify-backend.herokuapp.com/deleteuser', {
         method:"DELETE",    
       headers: {
             'x-access-token': localStorage.getItem('token'),
