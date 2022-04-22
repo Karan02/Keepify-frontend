@@ -9,7 +9,7 @@ import UpdateNote from "../UpdateNote/UpdateNote";
 function deleteNote(_id) {
 
   
-  fetch("http://localhost:3001/notes", {
+  fetch("https://keepify-keepify-backend.herokuapp.com/notes", {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json"
@@ -26,9 +26,9 @@ function deleteNote(_id) {
     });
   console.log(_id);
 }
-function updateNote(title,content,_id){
+function updateNote(title,content,_id,func){
 
-  fetch("http://localhost:3001/notes", {
+  fetch("https://keepify-keepify-backend.herokuapp.com/notes", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
@@ -46,7 +46,7 @@ function updateNote(title,content,_id){
       // setNotes(json);
     });
   console.log(_id);
-
+    func();
     // <UpdateNote id = {_id} title = {title} content = {content} />    
   
 }
@@ -62,7 +62,7 @@ function Note({ title, content, id,func,color }) {
         className="noteContent"
         style={{backgroundColor:color}}
         defaultValue={content}
-        onChange={(event) => updateNote(title,event.target.value,id)}
+        onChange={(event) => updateNote(title,event.target.value,id,func)}
       />
      
       <div className="extraItem">

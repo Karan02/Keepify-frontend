@@ -47,7 +47,7 @@ const Register = ({setUser}) => {
       // navigate("/notes");
       console.log(fname,lname,email,password);
       const name = fname+" "+lname;
-      const response = await fetch('http://localhost:3001/register', {
+      const response = await fetch('https://keepify-keepify-backend.herokuapp.com/register', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

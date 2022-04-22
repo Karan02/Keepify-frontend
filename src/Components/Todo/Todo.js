@@ -25,7 +25,7 @@ const Todo = () => {
             //     return curElem;
             //   })
             // );
-            const res = await fetch("http://localhost:3001/todo",{
+            const res = await fetch("https://keepify-keepify-backend.herokuapp.com/todo",{
                 method:"PUT",
                 headers:{
                   "Content-Type":"application/json"
@@ -50,7 +50,7 @@ const Todo = () => {
         else
         {
             
-            const res = await fetch("http://localhost:3001/todo",{
+            const res = await fetch("https://keepify-keepify-backend.herokuapp.com/todo",{
                 method:"POST",
                 headers:{
                   'x-access-token': localStorage.getItem('token'),
@@ -97,7 +97,7 @@ const Todo = () => {
     const deleteItems = (index) => {
     
     console.log(index);    
-    fetch("http://localhost:3001/todo", {
+    fetch("https://keepify-keepify-backend.herokuapp.com/todo", {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -117,7 +117,7 @@ const Todo = () => {
   }
 
     const removeAll = () => {
-        fetch("http://localhost:3001/todoclearall", {
+        fetch("https://keepify-keepify-backend.herokuapp.com/todoclearall", {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json"
@@ -137,7 +137,7 @@ const Todo = () => {
     }
 
     const getTodo = async () =>{
-      const req = await fetch('http://localhost:3001/todo', {
+      const req = await fetch('https://keepify-keepify-backend.herokuapp.com/todo', {
         method:"GET",
           headers: {
             'x-access-token': localStorage.getItem('token'),
@@ -157,7 +157,7 @@ const Todo = () => {
     },[])
     const updateCheck = async (index) =>{
       
-      const req = await fetch('http://localhost:3001/todo/checkUpdate', {
+      const req = await fetch('https://keepify-keepify-backend.herokuapp.com/todo/checkUpdate', {
         method:"PUT",
           headers: {
             'id':index

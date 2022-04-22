@@ -48,7 +48,7 @@ function Notes ({ onAdd }) {
       console.log(note.content)
       console.log(color)
       console.log(tag)
-      const res = await fetch("http://localhost:3001/notes",{
+      const res = await fetch("https://keepify-keepify-backend.herokuapp.com/notes",{
         method:"POST",
         headers:{
           'x-access-token': localStorage.getItem('token'),
@@ -85,7 +85,7 @@ function Notes ({ onAdd }) {
     apiGet();
   }
   const apiGet = async () => {
-    const req = await fetch('http://localhost:3001/notes', {
+    const req = await fetch('https://keepify-keepify-backend.herokuapp.com/notes', {
       method:"GET",
         headers: {
           'x-access-token': localStorage.getItem('token'),
@@ -110,7 +110,7 @@ function Notes ({ onAdd }) {
      
     setNotes2([]);
     console.log(search2);
-    const req = await fetch('http://localhost:3001/search', {
+    const req = await fetch('https://keepify-keepify-backend.herokuapp.com/search', {
       method:"GET",
         headers: {
           'x-access-token': localStorage.getItem('token'),
