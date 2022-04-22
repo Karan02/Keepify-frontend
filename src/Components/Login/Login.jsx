@@ -3,10 +3,31 @@ import { NavLink,useNavigate } from "react-router-dom";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './Login.css'
 import loginimage from "../Images/loginimage.svg";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = ({setUser,user}) => {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
+  const notify = () => toast.error('User not found,please check your email and password!', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });;
+
+    const notify2 = () => toast.success('Login successful!!', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
   
   let navigate = useNavigate();
  async function submithandler(event)
@@ -24,18 +45,19 @@ const Login = ({setUser,user}) => {
 				password,
 			}),
 		})
-
 		const data = await response.json()
 
 		if (data.user) {
 			localStorage.setItem('token', data.user)
-			alert('Login successful')
+			// alert('Login successful')
 			// window.location.href = '/dashboard'
+      notify2()
       setUser(true);
       navigate("/notes");
       console.log(localStorage.getItem('token'));
 		} else {
-			alert('Please check your username and password')
+      notify()
+			//alert('Please check your username and password')
 		}
     
     
@@ -64,6 +86,20 @@ const Login = ({setUser,user}) => {
       <div className="loginpicture" >
         <img src={loginimage} />
       </div>
+
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        enableMultiContainer
+/>
+
     </div>
   )
 }

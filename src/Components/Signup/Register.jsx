@@ -5,6 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import registerimage from "../Images/registerimage.svg";
 
 import { NavLink } from 'react-router-dom';
+
+
 const Register = ({setUser}) => {
   const [fname,setFName] = useState("");
   const [lname,setLName] = useState("");
@@ -12,9 +14,31 @@ const Register = ({setUser}) => {
   const [password,setPassword] = useState("");
   
   let navigate = useNavigate();
+  const CustomToast = () =>{
+    
+      return (
+          <div>
+              <p>Regsitration successful!! please login!</p>
+              <button className='loginredirect' onClick={(e)=>{ 
+                e.preventDefault();
+                navigate("/login");
+  
+              }} >Login</button>
+          </div>
+  
+      )
+  }
     async function  submithandler(event)
     {
-      const notify = () => toast("Email already present!");
+      const notify = () => toast.error('User with this email already present!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });;
 
       event.preventDefault();
       // setUser(true);
@@ -38,12 +62,21 @@ const Register = ({setUser}) => {
 		const data = await response.json()
     if(data.status === 'ok')
       {
-          alert("Registration successfull! Please login!");
-          navigate("/login");
+          // alert("Registration successfull! Please login!");
+          toast.success(CustomToast, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
+          // navigate("/login");
       }
     if(data.status === 'error')
       {
-        alert("Email already present")
+        notify()
       }
     }
   
@@ -79,6 +112,18 @@ const Register = ({setUser}) => {
             <div className="registerpicture" >
         <img src={registerimage}  />
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        enableMultiContainer
+/>
     </div>
   )
 }

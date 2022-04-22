@@ -10,7 +10,8 @@ const Profile = ({ setUser }) => {
   
     async function getusername()
     {
-      const req = await fetch('http://localhost:3001/username', {
+      const req = await fetch('https://keepify-keepify-backend.herokuapp.com/username', {
+        
           headers: {
             'x-access-token': localStorage.getItem('token'),
           },
@@ -20,6 +21,23 @@ const Profile = ({ setUser }) => {
   		if (data.status === 'ok') {
   			setUsername(data.data.name)
         setEmail(data.data.email)
+  		}
+    }
+    async function deleteuser()
+    {
+      const req = await fetch('http://localhost:3001/deleteuser', {
+        method:"DELETE",    
+      headers: {
+            'x-access-token': localStorage.getItem('token'),
+          },
+      })
+
+      const data = await req.json()
+  		if (data.status === 'ok') {
+          console.log(data.data)
+          localStorage.removeItem('token');
+          setUser(false);
+          navigate("/");
   		}
     }
   
@@ -60,8 +78,8 @@ const Profile = ({ setUser }) => {
         className="btn"
         onClick={(event) => {
           event.preventDefault();
-          console.log("delete user");
-         
+          // console.log("delete user");
+          deleteuser();
         }}
       >
         Delete Account
